@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iure - Portfólio e Conexões Profissionais</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portfólio e perfil de Iure, aspirante a desenvolvedor de software com projetos em Front-end, Back-end e tecnologias modernas." />
+    <meta name="keywords" content="Iure, desenvolvedor, portfólio, HTML, CSS, JavaScript, Python, projetos, LinkedIn, GitHub" />
+    <meta name="author" content="Iure" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfólio de Iure - Desenvolvedor em formação" />
+    <meta property="og:description" content="Conheça meu portfólio e conecte-se no LinkedIn e GitHub." />
+    <meta property="og:image" content="imagens/foto-iure.jpg" />
+    <meta property="og:type" content="website" />
+
+    <style>
+      :root {
+        --cor-principal: slateblue;
+        --cor-principal-escura: #4a3d8f;
+        --cor-texto-claro: #fff;
+        --cor-texto-escuro: #111;
+        --fonte-titulo: "Segoe UI", sans-serif;
+        --fonte-corpo: "Trebuchet MS", sans-serif;
+      }
+
+      body {
+        background-color: var(--cor-principal);
+        color: var(--cor-texto-claro);
+        font-family: var(--fonte-corpo);
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        transition: background-color 0.4s, color 0.4s;
+        line-height: 1.6;
+      }
+
+      header {
+        margin-bottom: 20px;
+      }
+
+      img.foto-perfil {
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border: 3px solid rgba(255,255,255,0.9);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      img.foto-perfil:hover {
+        transform: scale(1.05) rotate(2deg);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      }
+
+      h1 {
+        margin-top: 10px;
+        font-size: 2.4rem;
+        font-family: var(--fonte-titulo);
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        opacity: 0.9;
+      }
+
+      a.botao {
+        background-color: white;
+        font-size: 18px;
+        border-radius: 8px;
+        padding: 10px 20px;
+        display: inline-block;
+        margin: 10px auto;
+        color: var(--cor-principal);
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      a.botao:hover {
+        background-color: #ddd;
+        color: var(--cor-principal-escura);
+        transform: scale(1.05);
+      }
+
+      .dark-mode {
+        background-color: var(--cor-texto-escuro);
+        color: var(--cor-texto-claro);
+      }
+
+      .dark-mode a.botao {
+        background-color: #333;
+        color: gold;
+      }
+
+      .dark-mode a.botao:hover {
+        background-color: #555;
+        color: white;
+      }
+
+      /* Animações */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: aparecer 0.8s ease-in-out forwards;
+      }
+
+      @keyframes aparecer {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="imagens/foto-iure.jpg" alt="Foto de Iure" class="foto-perfil"> 
+      <h1>Iure Isaque</h1>
+      <h2>Desenvolvedor de Software em Formação</h2>
+    </header>
+
+    <main>
+      <section class="sobre fade-in">
+        <p>
+          Apaixonado por tecnologia, em constante aprendizado, com foco em desenvolvimento de sistemas.  
+          Atualmente estudando <strong>Front-end</strong> (JavaScript, HTML, CSS) e <strong>Python</strong> para Back-end.  
+          Busco criar soluções criativas, funcionais e eficientes.
+        </p>
+      </section>
+
+      <section class="skills fade-in">
+        <h3>Tecnologias em estudo:</h3>
+        <ul>
+          <li>HTML5, CSS3 & JavaScript</li>
+          <li>Python & Redes Neurais</li>
+          <li>SQL (em breve)</li>
+        </ul>
+      </section>
+
+      <section class="social fade-in">
+        <h3>Conecte-se comigo</h3>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://github.com/Ysaac360" target="_blank" id="linkGithub" class="botao">💻 Meu GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/seuusuario" target="_blank" id="linkLinkedin" class="botao">🔗 Meu LinkedIn</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="projetos fade-in">
+        <h3>Projetos em destaque</h3>
+        <ul>
+          <li>
+            <a href="https://github.com/Ysaac360/projeto1" target="_blank">📂 Sistema de Cadastro</a>
+          </li>
+          <li>
+            <a href="https://github.com/Ysaac360/projeto2" target="_blank">🎮 Jogo em Python</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="tema">
+        <button id="temaBotao" aria-label="Alternar tema da página">
+          🌙 Alternar Tema
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 - Iure Isaque da Silva.Dev | Portfólio Profissional</p>
+    </footer>
+
+    <script>
+      // Mensagem inicial (apenas 1 vez por navegador)
+      window.addEventListener("load", () => {
+        if (!localStorage.getItem("mensagemBoasVindas")) {
+          alert("Bem-vindo ao meu portfólio profissional! Aqui você encontra meus projetos e formas de contato.");
+          localStorage.setItem("mensagemBoasVindas", "true");
+        }
+      });
+
+      // Alternar tema
+      const botaoTema = document.getElementById("temaBotao");
+      botaoTema.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        botaoTema.textContent = document.body.classList.contains("dark-mode")
+          ? "☀️ Alternar Tema"
+          : "🌙 Alternar Tema";
+      });
+
+      // Interações com links
+      document.getElementById("linkGithub").addEventListener("click", () => {
+        alert("Abrindo meu GitHub para você conhecer meus projetos!");
+      });
+
+      document.getElementById("linkLinkedin").addEventListener("click", () => {
+        alert("Conecte-se comigo no LinkedIn para acompanhar meu progresso!");
+      });
+
+      // Efeito de fade-in ao rolar
+      const elementos = document.querySelectorAll(".fade-in");
+      window.addEventListener("scroll", () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        elementos.forEach(el => {
+          const boxTop = el.getBoundingClientRect().top;
+          if (boxTop < triggerBottom) {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
