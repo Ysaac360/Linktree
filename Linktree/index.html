@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iure Isaque - Portfólio Profissional</title>
+
+    <meta name="description" content="Portfólio de Iure Isaque, unindo automação industrial, eletrotécnica e desenvolvimento de software (Python, C#, JS)." />
+    <meta name="keywords" content="Iure, desenvolvedor, automação, C#, Python, JavaScript, SCADA, portfólio" />
+    <meta name="author" content="Iure Isaque da Silva" />
+
+    <meta property="og:title" content="Iure Isaque - Desenvolvedor & Automação" />
+    <meta property="og:description" content="Conheça meus projetos em Visão Computacional, Front-end e Back-end." />
+    <meta property="og:image" content="imagens/foto-iure.jpg" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" sizes="32x32" href="caminho/favicon.png">
+    <meta name="theme-color" content="#1b0033"> 
+    <link rel="canonical" href="https://www.iureisaque.com.br/">
+    
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      /* !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('SEU_ID_DO_POSTHOG', {api_host: 'https://app.posthog.com'}) */
+    </script>
+  </head>
+  <body>
+    <div class="cursor-neon" id="cursor"></div>
+
+    <svg class="svg-filter">
+      <filter id="distorcao">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="4" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+    <div class="bg-tornado"></div>
+
+    <header class="fade-in">
+      <div class="language-switcher">
+        <button onclick="mudarIdioma('pt')">🇧🇷 PT</button>
+        <button onclick="mudarIdioma('en')">🇺🇸 EN</button>
+      </div>
+
+      <img src="imagens-linktree/IMG_HDR_PORTRAIT.jpg" alt="Foto de Iure Isaque" class="foto-perfil"> 
+      <h1 data-i18n="nome">Iure Isaque</h1>
+      <h2 data-i18n="cargo">Desenvolvedor de Software & Automação</h2>
+    </header>
+
+    <main>
+      <section class="card fade-in">
+        <h3 data-i18n="tit_sobre">Sobre Mim</h3>
+        <p data-i18n="txt_sobre">
+          Apaixonado por tecnologia e em constante aprendizado. Unindo a vivência prática do chão de fábrica e a eletrotécnica com a programação, busco criar soluções inovadoras e eficientes. Estou me preparando para ingressar na engenharia (Software/Computação) e construir uma visão sistêmica entre hardware, visão computacional e back-end.
+        </p>
+      </section>
+
+      <section class="card fade-in">
+        <h3 data-i18n="tit_skills">Arsenal Tecnológico</h3>
+        <ul class="lista-skills">
+          <li>Python & Visão Computacional (OpenCV/YOLO)</li>
+          <li>C/C++ & C#</li>
+          <li>HTML5, CSS3 & JavaScript</li>
+          <li>SQL & Banco de Dados</li>
+          <li>CLPs & Automação Industrial</li>
+        </ul>
+      </section>
+
+      <section class="card fade-in">
+        <h3 data-i18n="tit_projetos">Projetos em Destaque</h3>
+        <ul class="lista-projetos">
+          <li>
+            <a href="https://github.com/Ysaac360/SCADA-Poka-Yoke" target="_blank" class="botao">
+              👁️ SCADA Poka-Yoke (Visão Computacional)
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Ysaac360" target="_blank" class="botao" data-i18n="txt_proj_dev">
+              Trabalhos de Desenvolvimento (Front-end & Back-end)
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card fade-in">
+        <h3 data-i18n="tit_conecte">Conecte-se comigo</h3>
+        <nav class="redes-sociais">
+          <a href="https://github.com/Ysaac360" target="_blank" class="botao outline">💻 GitHub</a>
+          <a href="https://www.linkedin.com/in/seuusuario" target="_blank" class="botao outline">🔗 LinkedIn</a>
+        </nav>
+      </section>
+
+      <button class="chatbot-fab" onclick="alert('Sistema de IA em treinamento. Em breve você poderá conversar com meu currículo!')" title="Falar com IA">
+        🤖
+      </button>
+
+    </main>
+
+    <footer class="fade-in">
+      <p>&copy; 2026 - Iure Isaque da Silva | Desenvolvedor | <span id="open-terminal" style="cursor:pointer; color:var(--verde-vibrante); font-weight:bold;">>_ Terminal</span></p>
+    </footer>
+
+    <div id="terminal-modal" class="oculto">
+      <div class="terminal-header">
+        <span>admin@iure-isaque:~</span>
+        <button id="close-terminal">X</button>
+      </div>
+      <div class="terminal-body" id="terminal-output">
+        <p>Conexão estabelecida. Digite 'help' para comandos.</p>
+      </div>
+      <div class="terminal-input-line">
+        <span>$</span>
+        <input type="text" id="terminal-input" autocomplete="off" autofocus>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
